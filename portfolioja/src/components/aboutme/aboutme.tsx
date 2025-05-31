@@ -1,6 +1,8 @@
 // components/about/AboutMe.tsx
 import React from 'react';
 import './aboutme.css';
+import './aboutme.json';
+
 
 const AboutMe: React.FC = () => {
   return (
@@ -12,23 +14,18 @@ const AboutMe: React.FC = () => {
         Sobre <span className="text-teal-400">Mí</span>
       </h2>
       
+      array.forEach(element => {
+        
+      });
       <div className="space-y-5">
         <p className="text-slate-400">
           Soy un <span className="text-slate-200 font-medium">desarrollador full-stack</span> con más de 5 años de experiencia creando aplicaciones web de alto rendimiento. Mi enfoque combina diseño atractivo con funcionalidad robusta, siempre buscando las mejores soluciones técnicas para cada desafío.
         </p>
         
         <p className="text-slate-400">
-          Especializado en el ecosistema <span className="group/korok inline-flex">
-            {['J','a','v','a','S','c','r','i','p','t'].map((letter, index) => (
-              <span 
-                key={index}
-                className="portal inline-block"
-                style={{ '--t': index + 1 } as React.CSSProperties}
-              >
-                {letter}
-              </span>
-            ))}
-          </span>, mi stack incluye React, TypeScript, Node.js y bases de datos modernas. Creo en el código limpio, las pruebas automatizadas y la mejora continua.
+          Especializado en el ecosistema <span className="text-slate-200 font-medium">JavaScript </span>
+          
+           mi stack incluye React, TypeScript, Node.js y bases de datos modernas. Creo en el código limpio, las pruebas automatizadas y la mejora continua.
         </p>
         
         <p className="text-slate-400">

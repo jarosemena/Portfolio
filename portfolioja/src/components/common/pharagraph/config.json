@@ -1,0 +1,21 @@
+{
+    "formatting": {
+      "bold": {
+        "symbol": "**",
+        "style": "bold"
+      },
+      "italic": {
+        "symbol": "_",
+        "style": "italic"
+      },
+      "highlight": {
+        "symbol": "==",
+        "style": "highlight"
+      }
+    },
+    "rendering": {
+      "bold": "(children) => <b className='custom-bold'>{children}</b>",
+      "italic": "(children) => <em>{children}</em>",
+      "highlight": "(children) => <span style={{ backgroundColor: '#ff0' }}>{children}</span>"
+    }
+  }

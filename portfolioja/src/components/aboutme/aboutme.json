@@ -1,0 +1,10 @@
+{
+    "aboutme": {
+      "title": "Mi Biografía",
+      "paragraphs": [
+        "Hola! Soy un #desarrollador full-stack# con _más de 5 años_ de experiencia.",
+        "Especializado en crear @soluciones innovadoras@ para problemas complejos.",
+        "Actualmente trabajo con #React# y #TypeScript# en proyectos _cutting-edge_."
+      ]
+    }
+  }

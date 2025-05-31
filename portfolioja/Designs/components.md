@@ -96,6 +96,108 @@ Tecnologías:
 Etiquetas: .bg-teal-400/10 (fondo claro) + .text-teal-300 (color verde-azulado).
 
 Interacciones:
+Componente: Sección "About Me"
+Propósito: Presentar una descripción personal y profesional.
+Estilos y Detalles:
+
+Texto:
+
+Párrafos: text-slate-400 (color gris claro).
+
+Enlaces: text-slate-200 (color claro) + hover:text-teal-300 (efecto hover).
+
+Efecto arcoíris ("Korok seeds"):
+
+Animación wobble:
+
+css
+.portal .portal-inner div { 
+  animation: wobble calc(.15s * var(--t)) linear infinite; 
+  filter: hue-rotate(0deg); 
+}  
+@keyframes wobble { 
+  to { filter: hue-rotate(1turn); }  /* Rotación de colores */
+}  
+Letras escalonadas: Usa group/korok con transiciones individuales (ej: delay-[50ms], delay-[75ms]).
+
+Estructura:
+Componente: Sección "About Me"
+Propósito: Presentar una descripción personal y profesional.
+Estilos y Detalles:
+
+Texto:
+
+Párrafos: text-slate-400 (color gris claro).
+
+Enlaces: text-slate-200 (color claro) + hover:text-teal-300 (efecto hover).
+
+Efecto arcoíris ("Korok seeds"):
+
+Animación wobble:
+
+css
+.portal .portal-inner div { 
+  animation: wobble calc(.15s * var(--t)) linear infinite; 
+  filter: hue-rotate(0deg); 
+}  
+@keyframes wobble { 
+  to { filter: hue-rotate(1turn); }  /* Rotación de colores */
+}  
+Letras escalonadas: Usa group/korok con transiciones individuales (ej: delay-[50ms], delay-[75ms]).
+
+Estructura:
+
+Fondo semitransparente: bg-slate-900/75 (75% de opacidad) + backdrop-blur (efecto difuminado).
+
+Scroll suave: scroll-mt-16 (margen para evitar solapamiento).
+
+3. Componente: Experience Timeline
+Propósito: Mostrar historial laboral en formato cronológico.
+Subcomponentes:
+
+Experience Item:
+
+Grid de 8 columnas: .grid-cols-8 (definido en el CSS).
+
+Estilos:
+
+Hover:
+
+Resaltado: .lg:hover:bg-slate-800/50 (fondo semitransparente).
+
+Sombra: .group-hover:drop-shadow-lg (efecto al pasar el cursor).
+
+Tecnologías:
+
+Etiquetas: .bg-teal-400/10 (fondo claro) + .text-teal-300 (color verde-azulado).
+
+Interacciones:
+
+Fondo semitransparente: bg-slate-900/75 (75% de opacidad) + backdrop-blur (efecto difuminado).
+
+Scroll suave: scroll-mt-16 (margen para evitar solapamiento).
+
+3. Componente: Experience Timeline
+Propósito: Mostrar historial laboral en formato cronológico.
+Subcomponentes:
+
+Experience Item:
+
+Grid de 8 columnas: .grid-cols-8 (definido en el CSS).
+
+Estilos:
+
+Hover:
+
+Resaltado: .lg:hover:bg-slate-800/50 (fondo semitransparente).
+
+Sombra: .group-hover:drop-shadow-lg (efecto al pasar el cursor).
+
+Tecnologías:
+
+Etiquetas: .bg-teal-400/10 (fondo claro) + .text-teal-300 (color verde-azulado).
+
+Interacciones:
 
 Ícono de flecha animado:
 
