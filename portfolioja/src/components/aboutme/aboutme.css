@@ -1,0 +1,98 @@
+/* components/about/aboutme.css */
+
+/* Estilos base para la sección About Me */
+#about {
+    scroll-margin-top: 4rem; /* Equivalente a scroll-mt-16 */
+    background-color: rgba(15, 23, 42, 0.75); /* bg-slate-900/75 */
+    backdrop-filter: blur(4px); /* backdrop-blur */
+    border-radius: 1.5rem; /* rounded-2xl */
+    padding: 1.5rem; /* p-6 */
+    margin: 3rem 0; /* my-12 */
+    max-width: 56rem; /* max-w-4xl */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Media queries para responsive padding */
+  @media (min-width: 768px) {
+    #about {
+      padding: 2rem; /* md:p-8 */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    #about {
+      padding: 2.5rem; /* lg:p-10 */
+    }
+  }
+  
+  /* Estilos para el título */
+  #about h2 {
+    font-size: 1.5rem; /* text-2xl */
+    line-height: 2rem;
+    font-weight: 700; /* font-bold */
+    color: #f1f5f9; /* text-slate-100 */
+    margin-bottom: 1.5rem; /* mb-6 */
+  }
+  
+  @media (min-width: 768px) {
+    #about h2 {
+      font-size: 1.875rem; /* md:text-3xl */
+      line-height: 2.25rem;
+    }
+  }
+  
+  #about h2 span {
+    color: #2dd4bf; /* text-teal-400 */
+  }
+  
+  /* Estilos para párrafos */
+  #about .space-y-5 > * + * {
+    margin-top: 1.25rem; /* space-y-5 */
+  }
+  
+  #about p {
+    color: #94a3b8; /* text-slate-400 */
+    line-height: 1.625;
+  }
+  
+  #about p span {
+    color: #e2e8f0; /* text-slate-200 */
+    font-weight: 500; /* font-medium */
+  }
+  
+  /* Estilos para enlaces */
+  #about a {
+    color: #e2e8f0; /* text-slate-200 */
+    font-weight: 500; /* font-medium */
+    transition: color 0.3s ease; /* transition-colors */
+  }
+  
+  #about a:hover {
+    color: #5eead4; /* hover:text-teal-300 */
+  }
+  
+  /* Contenedor para el efecto Korok seeds */
+  .korok-group {
+    display: inline-flex;
+  }
+  
+  /* Estilos para cada letra del efecto Korok seeds */
+  .portal {
+    display: inline-block;
+    animation: wobble calc(0.15s * var(--t)) linear infinite;
+    filter: hue-rotate(0deg);
+    margin-right: -0.05em; /* Evita espacios entre letras */
+  }
+  
+  /* Animación wobble para el efecto de arcoíris */
+  @keyframes wobble {
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  /* Pausar animación al pasar el mouse sobre la palabra */
+  .korok-group:hover .portal {
+    animation-play-state: paused;
+  }
