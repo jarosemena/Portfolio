@@ -71,9 +71,10 @@ export class TextFormatter {
 
   private createFormatRegex(): RegExp {
     const escapedSymbols = this.sortedSymbols
-      .map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-      .join('|');
-    
-    return new RegExp(`(${escapedSymbols})((?:[^]|\\n)*?)\\1`, 'gs');
+    .map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .join('|');
+  
+  // Grupo de captura CORRECTO para el contenido interno
+  return new RegExp(`(${escapedSymbols})([^]*?)\\1`, 'gs');
   }
 }

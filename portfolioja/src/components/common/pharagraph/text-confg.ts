@@ -38,12 +38,12 @@ export const loadConfig = (config: FullConfig) => {
           return dynamicFunction(children);
         } catch (innerError) {
           console.error(`Error ejecutando función para ${style}:`, innerError);
-          return <p>{children}</p>;
+          return {children};
         }
       };
     } catch (error) {
       console.error(`Error analizando función para ${style}:`, error);
-      renderFunctions[style] = (children) => <p>{children}</p>;
+      renderFunctions[style] = (children) =>  React.createElement('span', null, children);
     }
 });
 
