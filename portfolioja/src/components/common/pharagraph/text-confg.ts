@@ -27,29 +27,23 @@ export const loadConfig = (config: FullConfig) => {
 
   Object.entries(config.rendering).forEach(([style, funcString]) => {
     try {
-      const dynamicFunction = new Function('children', `return ${funcString}`);
-      // Usar Function para convertir el string a función
+      // Corregir: crear función que DEVUELVA directamente el elemento
+      const dynamicFunction = new Function(
+        'children', 
+        `return (${funcString})(children)`
+      );
+      
       renderFunctions[style] = (children: React.ReactNode) => {
         try {
-          const result = dynamicFunction(children);
-          
-            // Verificar si es un elemento React válido
-            if (React.isValidElement(result)) {
-                return result;
-            }
-            
-            // Si no es válido, devolver children en un fragmento
-            return React.createElement(React.Fragment, null, children);
-          
-            } catch (innerError) {
-            console.error(`Error ejecutando función para ${style}:`, innerError);
-            return React.createElement(React.Fragment, null, children);
-            }
+          return dynamicFunction(children);
+        } catch (innerError) {
+          console.error(`Error ejecutando función para ${style}:`, innerError);
+          return <p>{children}</p>;
         }
-   
+      };
     } catch (error) {
-        console.error(`Error analizando función para ${style}:`, error);
-        renderFunctions[style] = (children) => React.createElement(React.Fragment, null, children);
+      console.error(`Error analizando función para ${style}:`, error);
+      renderFunctions[style] = (children) => <p>{children}</p>;
     }
 });
 

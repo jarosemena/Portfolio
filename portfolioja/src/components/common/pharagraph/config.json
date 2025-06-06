@@ -14,7 +14,7 @@
       }
     },
     "rendering": {
-      "bold": "(children) => <b className='custom-bold'>{children}</b>",
+      "bold": "(children) => <span className=\"text-slate-200 font-medium\">{children} </span>",
       "italic": "(children) => <em>{children}</em>",
       "highlight": "(children) => <span style={{ backgroundColor: '#ff0' }}>{children}</span>"
     }
