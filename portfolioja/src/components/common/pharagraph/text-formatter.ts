@@ -44,15 +44,18 @@ export class TextFormatter {
         });
       }
 
-      // Texto formateado
-      const [symbol, content] = match;
+      // El contenido interno está en el grupo 1
+      const innerContent = match[1];
+      // Encontramos el símbolo usado (coincide con el primer símbolo encontrado)
+      const symbol = this.findMatchingSymbol(match[0]);
+      
       const style = this.symbolToStyleMap.get(symbol) || 'unknown';
       
       segments.push({
         type: 'formatted',
         symbol,
         style,
-        content: this.parse(content) // Recursión para contenido anidado
+        content: this.parse(innerContent)
       });
 
       lastIndex = regex.lastIndex;
@@ -71,10 +74,19 @@ export class TextFormatter {
 
   private createFormatRegex(): RegExp {
     const escapedSymbols = this.sortedSymbols
-    .map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-    .join('|');
-  
-  // Grupo de captura CORRECTO para el contenido interno
-  return new RegExp(`(${escapedSymbols})([^]*?)\\1`, 'gs');
+      .map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+      .join('|');
+    
+    return new RegExp(`(?:${escapedSymbols})([^]*?)(?:${escapedSymbols})`, 'gs');
+  }
+
+  private findMatchingSymbol(fullMatch: string): string {
+    // Buscamos cuál de los símbolos coincide al inicio del match
+    for (const symbol of this.sortedSymbols) {
+      if (fullMatch.startsWith(symbol)) {
+        return symbol;
+      }
+    }
+    return fullMatch.slice(0, this.sortedSymbols[0]?.length || 1);
   }
 }

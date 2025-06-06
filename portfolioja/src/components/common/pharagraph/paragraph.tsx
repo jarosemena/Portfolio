@@ -23,35 +23,7 @@ export const Paragraph: React.FC<ParagraphProps> = ({
   // Parsear texto
   const segments = useMemo(() => formatter.parse(text), [text, formatter]);
   
-  // Función recursiva de renderizado
-  /* const renderSegments = (segments: TextSegment[], keyPrefix: string): React.ReactNode[] => {
-    return segments.map((segment, index) => {
-      const key = `${keyPrefix}-${index}`;
-      
-      if (segment.type === 'text') {
-        return <span key={key}>{segment.content}</span>;
-      }
-      
-      // Segmento formateado
-      const renderFunction = renderConfig[segment.style];
-      const children = renderSegments(segment.content, key);
-      
-      if (renderFunction) {
-        return React.cloneElement(
-          renderFunction(children),
-          { key }
-        );
-      }
-      
-      // Estilo no reconocido - mostrar como texto plano
-      return (
-        <span key={key}>
-          {segment.symbol}{children}{segment.symbol}
-        </span>
-      );
-    });
-  };
-  */
+  
   const renderSegments = (segments: TextSegment[], baseKey: string): React.ReactNode[] => {
     return segments.map((segment, idx) => {
       const uniqueKey = `${baseKey}-${idx}`;
