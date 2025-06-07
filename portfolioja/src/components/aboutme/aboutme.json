@@ -1,10 +1,10 @@
 {
     "aboutme": {
-      "title": "Mi Biografía",
+      "title": "About Me",
       "paragraphs": [
-        "Hola! Soy un #desarrollador full-stack# con _más de 5 años_ de experiencia.",
-        "Especializado en crear @soluciones innovadoras@ para problemas complejos.",
-        "Actualmente trabajo con #React# y #TypeScript# en proyectos _cutting-edge_."
+        "Experienced **Full Stack Software Developer** with over ==8 years== of experience in **software architecture** of scalable enterprise applications using **.NET, C#, React, SQL, and Azure**. **PMP-certified** professional with ==DevOps== proficiency (CI/CD, AzureDevops)",
+        "Strong background in **API** development, database optimization, and **cloud-native** solutions. Adept at delivering ==secure==, ==user-centered== applications in Agile environments.",
+        "Passionate about ==continuous learning==, with exposure to containerization tools **Docker**, secure coding practices, and accessible UI design."
       ]
     }
   }
