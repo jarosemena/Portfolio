@@ -1,4 +1,4 @@
-// text-formatter.ts - Lógica de parsing (sin React)
+
 export interface FormatRule {
   symbol: string;
   style: string;
@@ -8,85 +8,94 @@ export interface FormatConfig {
   [name: string]: FormatRule;
 }
 
-export type TextSegment = 
-  | { type: 'text'; content: string }
-  | { type: 'formatted'; symbol: string; style: string; content: TextSegment[] };
+export interface ParsedSegment {
+  text: string;
+  format?: string;
+}
+
+export interface RenderingConfig {
+  [style: string]: string; // ejemplo: "bold" => '(children) => <span>{children}</span>'
+}
 
 export class TextFormatter {
   private sortedSymbols: string[];
   private symbolToStyleMap: Map<string, string>;
+  private styleToSymbolMap: Map<string, string>;
 
   constructor(config: FormatConfig) {
-    // Crear mapeo de símbolos a estilos
     this.symbolToStyleMap = new Map();
+    this.styleToSymbolMap = new Map();
+
     Object.values(config).forEach(rule => {
       this.symbolToStyleMap.set(rule.symbol, rule.style);
+      this.styleToSymbolMap.set(rule.style, rule.symbol);
     });
 
-    // Ordenar símbolos de mayor a menor longitud
     this.sortedSymbols = Object.values(config)
       .map(rule => rule.symbol)
       .sort((a, b) => b.length - a.length);
   }
 
-  public parse(text: string): TextSegment[] {
-    const segments: TextSegment[] = [];
-    const regex = this.createFormatRegex();
-    let lastIndex = 0;
-    let match: RegExpExecArray | null;
+  public parse(text: string): ParsedSegment[] {
+    const result: ParsedSegment[] = [];
+    let index = 0;
 
-    while ((match = regex.exec(text)) !== null) {
-      // Texto antes del match
-      if (match.index > lastIndex) {
-        segments.push({
-          type: 'text',
-          content: text.substring(lastIndex, match.index)
-        });
+    while (index < text.length) {
+      let matched = false;
+
+      for (const symbol of this.sortedSymbols) {
+        if (text.startsWith(symbol, index)) {
+          const end = this.findClosingSymbol(text, index + symbol.length, symbol);
+
+          if (end !== -1) {
+            const innerContent = text.substring(index + symbol.length, end);
+            const style = this.symbolToStyleMap.get(symbol);
+
+            result.push({ text: innerContent, format: style });
+            index = end + symbol.length;
+            matched = true;
+            break;
+          }
+        }
       }
 
-      // El contenido interno está en el grupo 1
-      const innerContent = match[1];
-      // Encontramos el símbolo usado (coincide con el primer símbolo encontrado)
-      const symbol = this.findMatchingSymbol(match[0]);
-      
-      const style = this.symbolToStyleMap.get(symbol) || 'unknown';
-      
-      segments.push({
-        type: 'formatted',
-        symbol,
-        style,
-        content: this.parse(innerContent)
-      });
+      if (!matched) {
+        let nextIndex = index + 1;
+        while (
+          nextIndex < text.length &&
+          !this.sortedSymbols.some(s => text.startsWith(s, nextIndex))
+        ) {
+          nextIndex++;
+        }
 
-      lastIndex = regex.lastIndex;
-    }
-
-    // Texto restante
-    if (lastIndex < text.length) {
-      segments.push({
-        type: 'text',
-        content: text.substring(lastIndex)
-      });
-    }
-
-    return segments;
-  }
-
-  private createFormatRegex(): RegExp {
-    const escapedSymbols = this.sortedSymbols
-      .map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-      .join('|');
-    
-    return new RegExp(`(?:${escapedSymbols})([^]*?)(?:${escapedSymbols})`, 'gs');
-  }
-
-  private findMatchingSymbol(fullMatch: string): string {
-    // Buscamos cuál de los símbolos coincide al inicio del match
-    for (const symbol of this.sortedSymbols) {
-      if (fullMatch.startsWith(symbol)) {
-        return symbol;
+        const plainText = text.substring(index, nextIndex);
+        result.push({ text: plainText });
+        index = nextIndex;
       }
     }
-    return fullMatch.slice(0, this.sortedSymbols[0]?.length || 1);
+
+    return result;
+  }
+
+  private findClosingSymbol(text: string, startIndex: number, symbol: string): number {
+    for (let i = startIndex; i <= text.length - symbol.length; i++) {
+      if (text.slice(i, i + symbol.length) === symbol) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
+  
+  public renderText(segments: ParsedSegment[], renderingConfig: RenderingConfig): string {
+    return segments
+      .map(({ text, format }) => {
+        if (!format) return text;
+        const template = renderingConfig[format];
+        return template
+          ? template.replace('{children}', text)
+          : text;
+      })
+      .join('');
   }
 }

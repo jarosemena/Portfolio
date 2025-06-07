@@ -1,51 +1,42 @@
-// paragraph.tsx - Componente principal
-import React, { useMemo } from 'react';
-import { TextFormatter, TextSegment } from './text-formatter';
-import { FullConfig, loadConfig, defaultFullConfig } from './text-confg';
+import React, { useEffect, useState } from 'react';
+import { TextFormatter, ParsedSegment } from './text-formatter';
+import {  loadConfig, defaultFullConfig } from './text-confg';
 
 interface ParagraphProps {
   text: string;
-  config?: FullConfig;
   className?: string;
 }
 
-export const Paragraph: React.FC<ParagraphProps> = ({ 
-  text, 
-  config = defaultFullConfig,
-  className = ""
-}) => {
-  // Cargar y procesar configuración
-  const { formatConfig, renderConfig } = useMemo(() => loadConfig(config), [config]);
-  
-  // Crear formateador
-  const formatter = useMemo(() => new TextFormatter(formatConfig), [formatConfig]);
-  
-  // Parsear texto
-  const segments = useMemo(() => formatter.parse(text), [text, formatter]);
-  
-  
-  const renderSegments = (segments: TextSegment[], baseKey: string): React.ReactNode[] => {
-    return segments.map((segment, idx) => {
-      const uniqueKey = `${baseKey}-${idx}`;
-      
-      if (segment.type === 'text') {
-        return <React.Fragment key={uniqueKey}>{segment.content}</React.Fragment>;
-      }
-  
-      const renderFunction = renderConfig[segment.style];
-      const children = renderSegments(segment.content, uniqueKey);
-  
-      return renderFunction ? (
-        React.cloneElement(renderFunction(children), { key: uniqueKey })
-      ) : (
-        <span key={uniqueKey}>{segment.symbol}{children}{segment.symbol}</span>
-      );
-    });
-  };
+export const Paragraph: React.FC<ParagraphProps> = ({ text, className = '' }) => {
+  const [segments, setSegments] = useState<ParsedSegment[]>([]);
+  const [renderConfig, setRenderConfig] = useState<any>(null);
+
+  useEffect(() => {
+    const init = async () => {
+      const config = await defaultFullConfig();
+      const { formatConfig, renderConfig } = loadConfig(config);
+      const formatter = new TextFormatter(formatConfig);
+      const parsed = formatter.parse(text);
+      setSegments(parsed);
+      setRenderConfig(renderConfig);
+    };
+    init();
+  }, [text]);
+
+  if (!renderConfig) return null;
 
   return (
     <p className={className}>
-      {renderSegments(segments, 'para')}
+      {segments.map((seg, idx) => {
+        const key = `seg-${idx}`;
+        //const Renderer = renderConfig[seg.format];
+        const Renderer = seg.format ? renderConfig[seg.format] : undefined;
+        return Renderer ? (
+          React.cloneElement(Renderer(seg.text), { key })
+        ) : (
+          <React.Fragment key={key}>{seg.text}</React.Fragment>
+        );
+      })}
     </p>
   );
 };

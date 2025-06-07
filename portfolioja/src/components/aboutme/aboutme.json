@@ -2,9 +2,9 @@
     "aboutme": {
       "title": "About Me",
       "paragraphs": [
-        "Experienced **Full Stack Software Developer** with over ==8 years== of experience in **software architecture** of scalable enterprise applications using **.NET, C#, React, SQL, and Azure**. **PMP-certified** professional with ==DevOps== proficiency (CI/CD, AzureDevops)",
-        "Strong background in **API** development, database optimization, and **cloud-native** solutions. Adept at delivering ==secure==, ==user-centered== applications in Agile environments.",
-        "Passionate about ==continuous learning==, with exposure to containerization tools **Docker**, secure coding practices, and accessible UI design."
+        "Experienced **Full Stack Software Developer** with over --8 years-- of experience in **software architecture** of scalable enterprise applications using **.NET, C#, React, SQL, and Azure**. **PMP-certified** professional with --DevOps-- proficiency (CI/CD, AzureDevops)",
+        "Strong background in **API** development, database optimization, and **cloud-native** solutions. Adept at delivering --secure--, --user-centered-- applications in Agile environments.",
+        "Passionate about --continuous learning--, with exposure to containerization tools **Docker**, secure coding practices, and accessible UI design."
       ]
     }
   }

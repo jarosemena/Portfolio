@@ -9,7 +9,7 @@
         "style": "italic"
       },
       "highlight": {
-        "symbol": "==",
+        "symbol": "--",
         "style": "highlight"
       }
     },
