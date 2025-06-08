@@ -13,9 +13,9 @@
         "style": "highlight"
       }
     },
-    "rendering": {
-      "bold": "(children) => <span className=\"text-slate-200 font-medium\">{children} </span>",
-      "italic": "(children) => <em>{children}</em>",
-      "highlight": "(children) => <span style={{ backgroundColor: '#ff0' }}>{children}</span>"
-    }
+"rendering": {
+  "bold": "(children) => React.createElement('span', { className: 'text-slate-200 font-medium' }, children)",
+  "italic": "(children) => React.createElement('em', null, children)",
+  "highlight": "(children) => React.createElement('span', { style: { backgroundColor: '#ff0' } }, children)"
+}
   }

@@ -26,14 +26,16 @@ export const loadConfig = (config: FullConfig) => {
 
   Object.entries(config.rendering).forEach(([style, funcString]) => {
     try {
-      const dynamicFunction = new Function('children', `return (${funcString})(children)`);
-      renderFunctions[style] = (children: React.ReactNode) => {
+      const dynamicFunction = new Function('children', 'React', `return (${funcString})(children, React)`) as (children: React.ReactNode, React: typeof import('react')) => React.ReactElement;
+
+      renderFunctions[style] = (children) => {
         try {
-          return dynamicFunction(children);
+          return dynamicFunction(children, React);
         } catch (innerError) {
           console.error(`Error ejecutando función para ${style}:`, innerError);
-          return  React.createElement('span', null, children);
+          return React.createElement('span', null, children);
         }
+      
       };
     } catch (error) {
       console.error(`Error analizando función para ${style}:`, error);
