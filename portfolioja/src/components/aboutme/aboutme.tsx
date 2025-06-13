@@ -13,7 +13,7 @@ const AboutMe: React.FC = () => {
       className="scroll-mt-16 bg-slate-900/75 backdrop-blur rounded-2xl p-6 md:p-8 lg:p-10 my-12 max-w-4xl mx-auto"
     >
       <h2 className="text-2xl md:text-3xl font-bold text-slate-100 mb-6">
-         <span className="text-teal-400">{data.aboutme.title}</span>
+         {data.aboutme.title}
       </h2>
       
       

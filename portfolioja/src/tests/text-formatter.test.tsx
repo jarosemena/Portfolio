@@ -1,4 +1,4 @@
-import { TextFormatter } from '.././components/common/pharagraph/text-formatter';
+import { TextFormatter } from '.././components/common/text-formatter';
 import config from '.././components/common/pharagraph/config.json';
 
 const formatConfig = config.formatting;

@@ -51,6 +51,6 @@ export const loadConfig = (config: FullConfig) => {
 
 // Configuración por defecto ahora cargada dinámicamente
 export const defaultFullConfig = async (): Promise<FullConfig> => {
-  const config = await import('./config.json');
+  const config = await import('./pharagraph/config.json');
   return config.default || config; // Soporte para export default
 };

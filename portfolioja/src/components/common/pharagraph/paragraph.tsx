@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { TextFormatter, ParsedSegment } from './text-formatter';
-import {  loadConfig, defaultFullConfig } from './text-confg';
+import { TextFormatter, ParsedSegment } from '../text-formatter';
+import {  loadConfig, defaultFullConfig } from '../text-config';
 
 interface ParagraphProps {
   text: string;
