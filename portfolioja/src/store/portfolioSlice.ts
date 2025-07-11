@@ -24,8 +24,11 @@ export const fetchPortfolioData = createAsyncThunk(
     try {
       const service = new PortfolioService();
       return await service.getPortfolioData();
-    } catch (error) {
+   } catch (error: unknown) {
+      if (error instanceof Error) {
       return rejectWithValue(error.message);
+       }
+      return rejectWithValue('An unknown error occurred');
     }
   }
 );
@@ -38,8 +41,11 @@ export const updateAboutMe = createAsyncThunk(
       const service = new PortfolioService();
       await service.updateAboutMe(data);
       return data; // Retornamos los datos actualizados
-    } catch (error) {
+   } catch (error: unknown) {
+      if (error instanceof Error) {
       return rejectWithValue(error.message);
+       }
+      return rejectWithValue('An unknown error occurred');
     }
   }
 );
