@@ -47,7 +47,7 @@ export class JsonPortfolioRepository implements IPortfolioRepository {
     async updateProjects(data: Array<{ id: string; updates: Partial<ProjectItem>; }>): Promise<void> {
         return new Promise((resolve) => {
             setTimeout(() => {
-                this.data.projects = this.data.projects.map(item => {
+                this.data.projects.items = this.data.projects.items.map(item => {
                     const update = data.find(u => u.id === item.id);
                     return update ? { ...item, ...update.updates } : item;
                 });
@@ -69,7 +69,7 @@ export class JsonPortfolioRepository implements IPortfolioRepository {
             }, 200);
         });
     }
-    
+
     async updateSkills(data: Partial<PortfolioState['skills']>): Promise<void> {
         return new Promise((resolve) => {
             setTimeout(() => {

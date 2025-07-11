@@ -1,6 +1,9 @@
 import { IPortfolioRepository } from "../repositories/IPortfolioRepository";
 import { PortfolioRepositoryFactory, DataSource } from "../repositories/PortfolioRepositoryFactory";
 import { PortfolioState } from "../models/portfolio/types";
+import { ExperienceItem } from "../models/experience/types";
+import { ProjectItem } from "../models/projects/types";
+import { EducationItem } from "../models/education/types";
 
 export class PortfolioService {
   private repository: IPortfolioRepository;
@@ -22,15 +25,15 @@ export class PortfolioService {
     return this.repository.updateAboutMe(data);
   }
 
-  async updateExperience(data: Partial<PortfolioState['experience']>): Promise<void> {
+  async updateExperience(data: Array<{ id: string; updates: Partial<ExperienceItem> }>): Promise<void> {
     return this.repository.updateExperience(data);
   }
 
-    async updateProjects(data: Partial<PortfolioState['projects']>): Promise<void> {
+    async updateProjects(data: Array<{ id: string; updates: Partial<ProjectItem> }>): Promise<void> {
     return this.repository.updateProjects(data);
   }
 
-    async updateEducation(data: Partial<PortfolioState['education']>): Promise<void> {
+    async updateEducation(data: Array<{ id: string; updates: Partial<EducationItem> }>): Promise<void> {
     return this.repository.updateEducation(data);
   }
 
