@@ -1,6 +1,9 @@
 import { IPortfolioRepository } from "../../domain/repositories/IPortfolioRepository";
 import { PortfolioState } from "../../domain/models/portfolio/types";
 import { db } from './database'; // Suponiendo una conexión a DB
+import { EducationItem } from "../../domain/models/education/types";
+import { ProjectItem } from "../../domain/models/projects/types";
+import { ExperienceItem } from "../../domain/models/experience/types";
 
 export class DbPortfolioRepository implements IPortfolioRepository {
   async getPortfolioData(): Promise<PortfolioState> {
@@ -30,7 +33,7 @@ export class DbPortfolioRepository implements IPortfolioRepository {
     }
   }
 
-  async updateExperience(data: Partial<PortfolioState['experience']>): Promise<void> {
+  async updateExperience(data: Array<{ id: string; updates: Partial<ExperienceItem> }>): Promise<void> {
     try {
       const docRef = db.collection('portfolios').doc('user123');
       await docRef.update({
@@ -41,7 +44,7 @@ export class DbPortfolioRepository implements IPortfolioRepository {
     }
   }
 
-  async updateProjects(data: Partial<PortfolioState['projects']>): Promise<void> {
+  async updateProjects(data: Array<{ id: string; updates: Partial<ProjectItem> }>): Promise<void> {
     try {
       const docRef = db.collection('portfolios').doc('user123');
       await docRef.update({
@@ -52,7 +55,7 @@ export class DbPortfolioRepository implements IPortfolioRepository {
     }
   }
 
-  async updateEducation(data: Partial<PortfolioState['education']>): Promise<void> {
+  async updateEducation(data: Array<{ id: string; updates: Partial<EducationItem> }>): Promise<void> {
     try {
       const docRef = db.collection('portfolios').doc('user123');
       await docRef.update({

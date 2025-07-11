@@ -1,5 +1,8 @@
 import { IPortfolioRepository } from "../../domain/repositories/IPortfolioRepository";
 import { PortfolioState } from "../../domain/models/portfolio/types";
+import { ExperienceItem } from "../../components/experiences/types";
+import { ProjectItem } from "../../domain/models/projects/types";
+import { EducationItem } from "../../domain/models/education/types";
 
 export class ApiPortfolioRepository implements IPortfolioRepository {
     private baseUrl: string;
@@ -32,7 +35,7 @@ export class ApiPortfolioRepository implements IPortfolioRepository {
         }
     }
 
-    async updateExperience(data: Partial<PortfolioState['experience']>): Promise<void> {
+    async updateExperience(data: Array<{ id: string; updates: Partial<ExperienceItem> }>): Promise<void> {
         const response = await fetch(`${this.baseUrl}/experience`, {
             method: 'PUT',
             headers: {
@@ -46,7 +49,7 @@ export class ApiPortfolioRepository implements IPortfolioRepository {
         }
     }
 
-    async updateProjects(data: Partial<PortfolioState['projects']>): Promise<void> {
+    async updateProjects(data: Array<{ id: string; updates: Partial<ProjectItem> }>): Promise<void> {
         const response = await fetch(`${this.baseUrl}/projects`, {
             method: 'PUT',
             headers: {
@@ -60,7 +63,7 @@ export class ApiPortfolioRepository implements IPortfolioRepository {
         }
     }
     
-    async updateEducation(data: Partial<PortfolioState['education']>): Promise<void> {
+    async updateEducation(data: Array<{ id: string; updates: Partial<EducationItem> }>): Promise<void> {
         const response = await fetch(`${this.baseUrl}/education`, {
             method: 'PUT',
             headers: {
