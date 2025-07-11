@@ -1,0 +1,61 @@
+{
+  "aboutMe": {
+    "title": "About Me",
+      "paragraphs": [
+        "Experienced **Full Stack Software Developer** with over _8 years_ of experience in **software architecture** of scalable enterprise applications using **.NET, C#, React, SQL, and Azure**. **PMP-certified** professional with **DevOps** proficiency (CI/CD, AzureDevops)",
+        "Strong background in **API** development, database optimization, and **cloud-native** solutions. Adept at delivering _secure_, _user-centered_ applications in Agile environments.",
+        "Passionate about _continuous learning_, with exposure to containerization tools **Docker**, secure coding practices, and accessible UI design."
+    ],
+    "contact": {
+      "email": "jjarosemena@gmail.com",
+      "github": "https://github.com/jarosemena",
+      "linkedin": "https://www.linkedin.com/in/jose-arosemena-72010824/?locale=en_US" 
+    }
+  },
+  "experience": [
+    {
+      "id": "exp1",
+      "period": "2020 - Present",
+      "position": "Senior Developer",
+      "company": "Tech Corp",
+      "description": "Developed scalable applications...",
+      "technologies": [
+        {"name": "React", "proficiency": "advanced"},
+        {"name": "TypeScript", "proficiency": "advanced"}
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu1",
+      "institution": "University",
+      "degree": "Computer Science",
+      "period": "2012-2016"
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "category": "Languages",
+        "items": [
+          {"name": "JavaScript", "proficiency": "expert"},
+          {"name": "TypeScript", "proficiency": "advanced"}
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "items": [
+      {
+        "id": "proj1",
+        "name": "Portfolio App",
+        "description": "My professional portfolio",
+        "technologies": [
+          {"name": "React", "proficiency": "advanced"}
+        ],
+        "imageUrl": "/images/project1.jpg",
+        "year": "2023"
+      }
+    ]
+  }
+}

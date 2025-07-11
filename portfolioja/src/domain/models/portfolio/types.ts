@@ -1,4 +1,4 @@
-import { AboutMe } from '../about/types';
+import { AboutMe } from '../aboutme/types';
 import { ExperienceItem } from '../experience/types';
 import { EducationItem } from '../education/types';
 import { SkillsState } from '../skills/types';

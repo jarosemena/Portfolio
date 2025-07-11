@@ -1,5 +1,5 @@
 import { IPortfolioRepository } from "../../domain/repositories/IPortfolioRepository";
-import { PortfolioState } from "../../domain/models/portfolioTypes";
+import { PortfolioState } from "../../domain/models/portfolio/types";
 import portfolioData from '../../../public/data/portfolio.json'; // Datos locales
 
 export class JsonPortfolioRepository implements IPortfolioRepository {
@@ -27,6 +27,48 @@ export class JsonPortfolioRepository implements IPortfolioRepository {
       }, 200);
     });
   }
+
+  async updateExperience(data: Partial<PortfolioState['experience']>): Promise<void> {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        this.data.experience = { ...this.data.experience, ...data };
+        console.log("experience updated locally:", this.data.experience);
+        resolve();
+      }, 200);
+    });
+  }
+
+  async updateProjects(data: Partial<PortfolioState['projects']>): Promise<void> {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        this.data.projects = { ...this.data.projects, ...data };
+        console.log("projects updated locally:", this.data.projects);
+        resolve();
+      }, 200);
+    });
+  }
+
+  async updateEducation(data: Partial<PortfolioState['education']>): Promise<void> {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        this.data.education = { ...this.data.education, ...data };
+        console.log("education updated locally:", this.data.education);
+        resolve();
+      }, 200);
+    });
+  }
+
+  async updateSkills(data: Partial<PortfolioState['skills']>): Promise<void> {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        this.data.skills = { ...this.data.skills, ...data };
+        console.log("skills updated locally:", this.data.skills);
+        resolve();
+      }, 200);
+    });
+  }
+
+ 
 
   // Implementar otros métodos...
 }

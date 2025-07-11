@@ -1,5 +1,5 @@
 import { PortfolioState } from './types';
-import { createAboutMe } from '../about/models';
+import { createAboutMe } from '../aboutme/models';
 import { createSkillsState } from '../skills/models';
 
 export const createPortfolioState = (data: Partial<PortfolioState> = {}): PortfolioState => ({
