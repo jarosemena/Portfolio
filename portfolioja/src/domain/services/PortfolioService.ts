@@ -1,6 +1,6 @@
 import { IPortfolioRepository } from "../repositories/IPortfolioRepository";
 import { PortfolioRepositoryFactory, DataSource } from "../repositories/PortfolioRepositoryFactory";
-import { PortfolioState } from "../models/portfolioTypes";
+import { PortfolioState } from "../models/portfolio/types";
 
 export class PortfolioService {
   private repository: IPortfolioRepository;
@@ -22,8 +22,20 @@ export class PortfolioService {
     return this.repository.updateAboutMe(data);
   }
 
-  async addExperience(experience: ExperienceItem): Promise<void> {
-    return this.repository.addExperience(experience);
+  async updateExperience(data: Partial<PortfolioState['experience']>): Promise<void> {
+    return this.repository.updateExperience(data);
+  }
+
+    async updateProjects(data: Partial<PortfolioState['projects']>): Promise<void> {
+    return this.repository.updateProjects(data);
+  }
+
+    async updateEducation(data: Partial<PortfolioState['education']>): Promise<void> {
+    return this.repository.updateEducation(data);
+  }
+
+    async updateSkills(data: Partial<PortfolioState['skills']>): Promise<void> {
+    return this.repository.updateSkills(data);
   }
 
   // Otros métodos del servicio...
