@@ -1,21 +1,21 @@
-{
-    "formatting": {
-      "bold": {
-        "symbol": "**",
-        "style": "bold"
-      },
-      "italic": {
-        "symbol": "_",
-        "style": "italic"
-      },
-      "highlight": {
-        "symbol": "--",
-        "style": "highlight"
-      }
+  {
+  "formatting": [
+    {
+      "symbol": "**",
+      "style": "bold"
     },
-"rendering": {
-  "bold": "(children) => React.createElement('span', { className: 'text-slate-200 font-medium' }, children)",
-  "italic": "(children) => React.createElement('em', null, children)",
-  "highlight": "(children) => React.createElement('span', { style: { backgroundColor: '#e0e0e0' , color: '#212121'} }, children)"
-}
+    {
+      "symbol": "_",
+      "style": "italic"
+    },
+    {
+      "symbol": "--",
+      "style": "highlight"
+    }
+  ],
+  "rendering": {
+    "bold": "(children) => React.createElement('span', { className: 'text-slate-200 font-medium' }, children)",
+    "italic": "(children) => React.createElement('em', null, children)",
+    "highlight": "(children) => React.createElement('span', { style: { backgroundColor: '#e0e0e0', color: '#212121' } }, children)"
   }
+}

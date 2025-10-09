@@ -5,12 +5,18 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "module": "esnext",
+    "types": ["vite/client"],
+    "moduleResolution": "node", 
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@domain/*": ["domain/*"],
+      "@infrastructure/*": ["infrastructure/*"],
+      "@tests/*": ["tests/*"]
     }
   }
 }

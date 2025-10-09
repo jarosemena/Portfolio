@@ -8,11 +8,16 @@ describe('loadConfig with dynamic function strings', () => {
 
     expect(typeof renderConfig.bold).toBe('function');
     const boldOutput = renderConfig.bold('test');
+    
     expect(boldOutput.type).toBe('span');
-    expect(boldOutput.props.className).toContain('text-slate-200');
+   expect(boldOutput.props).toEqual({
+  children: "test",
+  className: "text-slate-200 font-medium"
+});
 
     const italicOutput = renderConfig.italic('test');
+    
     expect(italicOutput.type).toBe('em');
-    expect(italicOutput.props.children).toBe('test');
+    expect(italicOutput.props).toEqual( {"children": "test"});
   });
 });
