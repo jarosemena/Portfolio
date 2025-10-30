@@ -16,7 +16,7 @@ export interface RenderConfig {
 }
 
 export interface FullConfig {
-  formatting: FormatConfig;
+  formatting: FormatRule[] | FormatConfig;
   rendering: RenderConfig;
 }
 
@@ -43,8 +43,15 @@ export const loadConfig = (config: FullConfig) => {
     }
   });
 
+  const formatConfig = Array.isArray(config.formatting)
+    ? config.formatting.reduce((acc, rule) => {
+        acc[rule.style] = rule;
+        return acc;
+      }, {} as FormatConfig)
+    : config.formatting;
+
   return {
-    formatConfig: config.formatting,
+    formatConfig,
     renderConfig: renderFunctions,
   };
 };

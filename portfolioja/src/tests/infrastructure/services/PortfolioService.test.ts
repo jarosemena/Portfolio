@@ -1,6 +1,6 @@
 // src/tests/services/PortfolioService.test.ts
 import { PortfolioService } from '../../../domain/services/PortfolioService';
-import { mockPortfolioData } from '../testData.ts';
+import { mockPortfolioData } from '@tests/testData';
 
 // Mock del repositorio
 const mockRepository = {
@@ -9,7 +9,7 @@ const mockRepository = {
   // ...otros métodos
 };
 
-jest.mock('../../infrastructure/factories/PortfolioRepositoryFactory', () => ({
+jest.mock('../../../domain/repositories/PortfolioRepositoryFactory', () => ({
   PortfolioRepositoryFactory: {
     createRepository: jest.fn(() => mockRepository)
   }

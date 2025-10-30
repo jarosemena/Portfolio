@@ -1,6 +1,6 @@
 // src/tests/infrastructure/api/ApiPortfolioRepository.test.ts
-import { ApiPortfolioRepository } from '../../infrastructure/api/ApiPortfolioRepository';
-import { mockPortfolioData } from '..s/testData';
+import { ApiPortfolioRepository } from '@/infrastructure/api/ApiPortfolioRepository';
+import { mockPortfolioData } from '@tests/testData';
 
 describe('ApiPortfolioRepository', () => {
   let repository: ApiPortfolioRepository;

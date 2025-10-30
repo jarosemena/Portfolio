@@ -13,8 +13,7 @@ export class PortfolioService {
   }
 
   private getDefaultDataSource(): DataSource {
-    // Puede basarse en variables de entorno o configuración
-    return import.meta.env.MODE === 'production' ? 'api' : 'json';
+    return 'json';
   }
 
   async getPortfolioData(): Promise<PortfolioState> {

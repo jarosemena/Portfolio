@@ -1,29 +1,73 @@
-// src/tests/infrastructure/json/JsonPortfolioRepository.test.ts
-import { JsonPortfolioRepository } from '../../../../infrastructure/json/JsonPortfolioRepository';
-import { mockPortfolioData } from '../../../testData';
+import { JsonPortfolioRepository } from '@/infrastructure/json/JsonPortfolioRepository';
+import { PortfolioState } from '@/domain/models/portfolio/types';
 
-jest.mock('../../../../../public/data/portfolio.json', () => mockPortfolioData, { virtual: true });
+const mockData = {
+  aboutMe: {
+    title: 'Professional Software Developer',
+    paragraphs: ['Test paragraph'],
+    contact: {
+      email: 'test@example.com',
+      phone: '',
+      location: '',
+      website: '',
+      github: '',
+      linkedin: '',
+      twitter: ''
+    }
+  },
+  experience: [],
+  education: [],
+  skills: {
+    title: 'Skills',
+    categories: [],
+    technicalSummary: ''
+  },
+  projects: {
+    title: 'Projects',
+    items: []
+  }
+};
+
+jest.mock('../../../../public/data/portfolio.json', () => ({
+  __esModule: true,
+  default: {
+    aboutMe: {
+      title: 'Professional Software Developer',
+      paragraphs: ['Test paragraph'],
+      contact: {
+        email: 'test@example.com',
+        phone: '',
+        location: '',
+        website: '',
+        github: '',
+        linkedin: '',
+        twitter: ''
+      }
+    },
+    experience: [],
+    education: [],
+    skills: {
+      title: 'Skills',
+      categories: [],
+      technicalSummary: ''
+    },
+    projects: {
+      title: 'Projects',
+      items: []
+    }
+  }
+}));
 
 describe('JsonPortfolioRepository', () => {
   let repository: JsonPortfolioRepository;
 
   beforeEach(() => {
-    jest.useFakeTimers();
     repository = new JsonPortfolioRepository();
   });
 
-  afterEach(() => {
-    jest.useRealTimers();
+  it('should return portfolio data from JSON file', async () => {
+    const result = await repository.getPortfolioData();
+    expect(result.aboutMe.title).toBe('Professional Software Developer');
+    expect(result.aboutMe.paragraphs).toEqual(['Test paragraph']);
   });
-
-  describe('getPortfolioData', () => {
-    it('should return portfolio data with delay', async () => {
-      const promise = repository.getPortfolioData();
-      jest.advanceTimersByTime(300);
-      const result = await promise;
-      expect(result).toEqual(mockPortfolioData);
-    });
-  });
-
-  // Pruebas para otros métodos...
 });

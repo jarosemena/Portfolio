@@ -1,8 +1,31 @@
 import { TextFormatter } from '../components/common/text-formatter';
-import config from '../components/common/pharagraph/config.json';
+const config = {
+  "formatting": [
+    {
+      "symbol": "**",
+      "style": "bold"
+    },
+    {
+      "symbol": "_",
+      "style": "italic"
+    },
+    {
+      "symbol": "--",
+      "style": "highlight"
+    }
+  ],
+  "rendering": {
+    "bold": "(children) => React.createElement('span', { className: 'text-slate-200 font-medium' }, children)",
+    "italic": "(children) => React.createElement('em', null, children)",
+    "highlight": "(children) => React.createElement('span', { style: { backgroundColor: '#e0e0e0', color: '#212121' } }, children)"
+  }
+};
 
 
-const formatConfig = config.formatting;
+const formatConfig = config.formatting.reduce((acc, rule) => {
+  acc[rule.style] = rule;
+  return acc;
+}, {} as Record<string, { symbol: string; style: string }>);
 const renderingConfig = config.rendering;
 
 describe('TextFormatter (with config.json)', () => {

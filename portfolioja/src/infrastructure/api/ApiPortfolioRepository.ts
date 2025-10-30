@@ -7,7 +7,7 @@ import { EducationItem } from "../../domain/models/education/types";
 export class ApiPortfolioRepository implements IPortfolioRepository {
     private baseUrl: string;
 
-    constructor(baseUrl: string = import.meta.env.VITE_API_BASE_URL) {
+    constructor(baseUrl: string = process.env.VITE_API_BASE_URL || '') {
         this.baseUrl = baseUrl;
     }
 
