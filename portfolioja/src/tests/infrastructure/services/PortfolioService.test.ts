@@ -1,6 +1,6 @@
 // src/tests/services/PortfolioService.test.ts
 import { PortfolioService } from '../../../domain/services/PortfolioService';
-import { mockPortfolioData } from '@tests/testData';
+import { mockPortfolioData } from '../../testData';
 
 // Mock del repositorio
 const mockRepository = {

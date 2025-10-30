@@ -1,32 +1,5 @@
-import { JsonPortfolioRepository } from '@/infrastructure/json/JsonPortfolioRepository';
-import { PortfolioState } from '@/domain/models/portfolio/types';
+import { JsonPortfolioRepository } from '../../../infrastructure/json/JsonPortfolioRepository';
 
-const mockData = {
-  aboutMe: {
-    title: 'Professional Software Developer',
-    paragraphs: ['Test paragraph'],
-    contact: {
-      email: 'test@example.com',
-      phone: '',
-      location: '',
-      website: '',
-      github: '',
-      linkedin: '',
-      twitter: ''
-    }
-  },
-  experience: [],
-  education: [],
-  skills: {
-    title: 'Skills',
-    categories: [],
-    technicalSummary: ''
-  },
-  projects: {
-    title: 'Projects',
-    items: []
-  }
-};
 
 jest.mock('../../../../public/data/portfolio.json', () => ({
   __esModule: true,

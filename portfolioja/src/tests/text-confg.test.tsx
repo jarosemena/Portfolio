@@ -1,5 +1,5 @@
-import React from 'react';
-import { loadConfig, defaultFullConfig } from '.././components/common/text-config';
+// import React from 'react';
+import { loadConfig } from '.././components/common/text-config';
 
 describe('loadConfig with dynamic function strings', () => {
   it('parses render functions correctly from JSON', async () => {
