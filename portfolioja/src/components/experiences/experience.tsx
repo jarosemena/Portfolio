@@ -3,64 +3,73 @@ import './experience.css';
 import { ExperienceItem, ExperienceTimelineProps } from './types';
 
 const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experiences }) => {
-  const [showAll, setShowAll] = useState(false);
-  const initialExperiences = experiences.slice(0, 2);
-  const hasMoreExperiences = experiences.length > 2;
+  const [visibleCount, setVisibleCount] = useState(2);
+  const hasMoreExperiences = experiences.length > visibleCount;
+  const isShowingAll = visibleCount >= experiences.length;
+
+  const handleShowMore = () => {
+    setVisibleCount(prev => Math.min(prev + 2, experiences.length));
+  };
+
+  const handleShowLess = () => {
+    setVisibleCount(2);
+  };
+
+  const visibleExperiences = experiences.slice(0, visibleCount);
 
   return (
     <div className="timelineContainer">
       <div className="container">
         <div className="titleContainer">
           <h2 className="title">Work Experience</h2>
-          {hasMoreExperiences && (showAll ? (
-            <button 
-              className="expandButton collapseButton" 
-              onClick={() => setShowAll(false)}
-              title="Show less experiences"
-            >
-              −
-            </button>
-          ) : (
+          {hasMoreExperiences && (
             <button 
               className="expandButton" 
-              onClick={() => setShowAll(true)}
+              onClick={handleShowMore}
               title="Show more experiences"
             >
               +
             </button>
-          ))}
+          )}
+          {isShowingAll && (
+            <button 
+              className="expandButton collapseButton" 
+              onClick={handleShowLess}
+              title="Show less experiences"
+            >
+              −
+            </button>
+          )}
         </div>
         
         <div className="experienceList">
-          {(showAll ? experiences : initialExperiences).map((experience) => (
+          {visibleExperiences.map((experience) => (
             <ExperienceItemComponent key={experience.id} experience={experience} />
           ))}
         </div>
 
-        {hasMoreExperiences && (
-          <>
-            {!showAll ? (
-              <button 
-                className="showMoreButton"
-                onClick={() => setShowAll(true)}
-              >
-                Show More Experiences
-              </button>
-            ) : (
-              <div className="closeSection">
-                <p className="closeSectionText">
-                  You've reached the end of my professional journey so far.
-                  Thank you for your interest!
-                </p>
-                <button 
-                  className="showLessButton"
-                  onClick={() => setShowAll(false)}
-                >
-                  Show Less
-                </button>
-              </div>
-            )}
-          </>
+        {hasMoreExperiences && !isShowingAll && (
+          <button 
+            className="showMoreButton"
+            onClick={handleShowMore}
+          >
+            Show More Experiences
+          </button>
+        )}
+        
+        {isShowingAll && (
+          <div className="closeSection">
+            <p className="closeSectionText">
+              You've reached the end of my professional journey so far.
+              Thank you for your interest!
+            </p>
+            <button 
+              className="showLessButton"
+              onClick={handleShowLess}
+            >
+              Show Less
+            </button>
+          </div>
         )}
       </div>
     </div>
@@ -77,9 +86,13 @@ const ExperienceItemComponent: React.FC<{ experience: ExperienceItem }> = ({ exp
         <div>
           <h3 className="position">{experience.position}</h3>
           <h4 className="company">{experience.company}</h4>
-          <p className="description">
-            {experience.description}
-          </p>
+          <ul className="descriptions">
+            {experience.descriptions.map((description, index) => (
+              <li key={index} className="description">
+                {description}
+              </li>
+            ))}
+          </ul>
           
           {experience.technologies.length > 0 && (
             <div className="technologies">

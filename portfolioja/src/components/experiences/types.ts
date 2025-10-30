@@ -7,7 +7,7 @@ export interface Technology {
     period: string;
     position: string;
     company: string;
-    description: string;
+    descriptions: string[];
     technologies: Technology[];
     link?: string;
   }
