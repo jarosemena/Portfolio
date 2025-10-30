@@ -10,7 +10,8 @@
         { "name": ".NET Core" },
         { "name": "Azure Kubernetes" },
         { "name": "Microservices" },
-        { "name": "Cloud Architecture" }
+        { "name": "Cloud Architecture" },
+        { "name": "AKS" }
       ],
       "link": "https://www.copaair.com"
     },
@@ -19,13 +20,15 @@
       "period": "Jul 2019 – Oct 2022",
       "position": "Sr. Software Developer",
       "company": "Seguros SURA, Panama",
-      "description": "• Architected a health insurance microservices platform using Oracle OSB and .NET Core, boosting processing efficiency by 40%.\n• Automated ETL workflows with Python, cutting data load times by 30%.\n• Mentored 15+ developers in Agile practices, ensuring on-time delivery of 10+ mission-critical projects.",
+      "description": "• Architected a health insurance microservices platform using Oracle OSB and .NET Core, boosting processing efficiency by 40%.\n• Automated ETL workflows with Python, cutting data load times by 30%.\n• Mentored 15+ developers in Agile practices, ensuring on-time delivery of 10+ mission-critical projects.\n• Designed integrations for the health ecosystem consisting of 7 applications connected by services implemented in OSB Service Bus.\n• Implemented 2 web applications based on APEX with ORACLE database, including customizations.",
       "technologies": [
         { "name": ".NET Core" },
         { "name": "Oracle OSB" },
         { "name": "Python" },
         { "name": "ETL" },
-        { "name": "Agile Coaching" }
+        { "name": "Agile Coaching" },
+        { "name": "Oracle APEX" },
+        { "name": "Oracle DB" }
       ],
       "link": "https://www.segurossura.com"
     },
@@ -34,12 +37,87 @@
       "period": "Feb 2018 – Jun 2019",
       "position": "Software Developer",
       "company": "Fidanque Comunicaciones Industriales",
-      "description": "• Built cloud-first systems using Azure and WebSockets for real-time industrial data visualization.\n• Developed a Xamarin-based mobile app with push notifications, replacing legacy systems and improving response times by 50%.",
+      "description": "• Built cloud-first systems using Azure and WebSockets for real-time industrial data visualization.\n• Developed a Xamarin-based mobile app with push notifications, replacing legacy systems and improving response times by 50%.\n• Developed responsive web pages using CSS, XML, HTML, JavaScript, C# .NET API and SQL Server.\n• Managed SQL Server and IIS server administration.",
       "technologies": [
         { "name": "Azure" },
         { "name": "WebSockets" },
         { "name": "Xamarin" },
-        { "name": "Mobile Development" }
+        { "name": "Mobile Development" },
+        { "name": "Real-time Systems" },
+        { "name": "C#" },
+        { "name": "SQL Server" },
+        { "name": "ASP.NET" }
+      ]
+    },
+    {
+      "id": "4",
+      "period": "Sep 2015 – Jan 2018",
+      "position": "Project Manager",
+      "company": "Project Management Consultant",
+      "description": "• Prioritized requirements and created roadmaps and schedules aligned with project scope.\n• Performed planning using Gantt diagrams, MS Project, and WorkFront.\n• Facilitated meetings with key leaders and collaborated with project teams to ensure timely decision-making and effective communication among stakeholders at all levels.\n• Maintained detailed project records, including task progress, resource costs, and allocated budgets to analyze performance and handle management communication for critical decisions.",
+      "technologies": [
+        { "name": "MS Project" },
+        { "name": "WorkFront" },
+        { "name": "Gantt Charts" },
+        { "name": "Project Management" },
+        { "name": "SCRUM" }
+      ]
+    },
+    {
+      "id": "5",
+      "period": "Jul 2013 – Sep 2015",
+      "position": "Software Developer",
+      "company": "Seguros SURA, Panama",
+      "description": "• Developed reports in SQL Server Reporting Services and performed basic server administration.\n• Coordinated migration projects under SCRUM methodology, managing Control and Administration for the migration of Civil Liability, Auto, and Fire insurance policies.\n• Participated as a developer during the migration of the accounting system to SAP, with all project developments done using SCRUM.\n• Developed applications in Natural Software AG for business support and maintained the company's Core system.\n• Developed integrations for sending information to SAP.",
+      "technologies": [
+        { "name": "SQL Server" },
+        { "name": "SSRS" },
+        { "name": "SAP" },
+        { "name": "Natural AG" },
+        { "name": "SCRUM" }
+      ],
+      "link": "https://www.segurossura.com"
+    },
+    {
+      "id": "6",
+      "period": "Sep 2012 – Jul 2013",
+      "position": "Software Developer",
+      "company": "UETA Inc.",
+      "description": "• Analyzed and developed applications in Visual Studio 2010 with SQL Server Database, ASP.NET and C#.\n• Managed SQL Server administration, ICG Front Retail Administration, and reports.\n• Supported and configured SAP Business ONE.",
+      "technologies": [
+        { "name": "Visual Studio" },
+        { "name": "SQL Server" },
+        { "name": "ASP.NET" },
+        { "name": "C#" },
+        { "name": "SAP Business ONE" }
+      ]
+    },
+    {
+      "id": "7",
+      "period": "Aug 2011 – Aug 2012",
+      "position": "Systems Engineer",
+      "company": "Indra",
+      "description": "• Provided Oracle database support for Local Data Warehouse using information loading processes based on Linux BATCH Scripts.\n• Analyzed, designed, and developed business reports with Oracle BusinessObjects and Oracle Database.",
+      "technologies": [
+        { "name": "Oracle Database" },
+        { "name": "Oracle BusinessObjects" },
+        { "name": "Linux" },
+        { "name": "BATCH Scripts" },
+        { "name": "Data Warehouse" }
+      ]
+    },
+    {
+      "id": "8",
+      "period": "Sep 2010 – Aug 2011",
+      "position": "Software Developer",
+      "company": "AssasoftGlobal",
+      "description": "• Participated in the ERP migration project for travel agencies, migrating from VB6 to C# .NET with SQL Server 2005 database.",
+      "technologies": [
+        { "name": "C#" },
+        { "name": ".NET" },
+        { "name": "SQL Server 2005" },
+        { "name": "VB6" },
+        { "name": "ERP Migration" }
       ]
     }
   ]

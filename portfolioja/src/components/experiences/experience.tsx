@@ -37,13 +37,30 @@ const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experiences }) 
           ))}
         </div>
 
-        {hasMoreExperiences && !showAll && (
-          <button 
-            className="showMoreButton"
-            onClick={() => setShowAll(true)}
-          >
-            Show More Experiences
-          </button>
+        {hasMoreExperiences && (
+          <>
+            {!showAll ? (
+              <button 
+                className="showMoreButton"
+                onClick={() => setShowAll(true)}
+              >
+                Show More Experiences
+              </button>
+            ) : (
+              <div className="closeSection">
+                <p className="closeSectionText">
+                  You've reached the end of my professional journey so far.
+                  Thank you for your interest!
+                </p>
+                <button 
+                  className="showLessButton"
+                  onClick={() => setShowAll(false)}
+                >
+                  Show Less
+                </button>
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>
