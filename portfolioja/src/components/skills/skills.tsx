@@ -61,7 +61,7 @@ const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
 };
 
 const Skills: React.FC = () => {
-  const skills: Skill[] = skillsData.skills;
+  const skills = skillsData.skills as Skill[];
 
   const skillsByCategory = skills.reduce<SkillsByCategory>((acc, skill) => {
     if (!acc[skill.category]) {
