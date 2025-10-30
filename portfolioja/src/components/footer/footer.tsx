@@ -1,4 +1,3 @@
-import React from 'react';
 import './footer.css';
 
 export const Footer = () => {
@@ -27,7 +26,7 @@ export const Footer = () => {
               GitHub
             </a>
             <a 
-              href="https://linkedin.com/in/jarosemena" 
+              href="https://www.linkedin.com/in/jose-arosemena-72010824/?locale=en_US" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-link"

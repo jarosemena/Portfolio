@@ -10,13 +10,19 @@ export const CustumHeader = () => {
           
           {/* Social Links */}
           <div className="social-links">
-            <a href="#" className="social-link">
+            <a href="https://github.com/jarosemena" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-link">
               <GitHubIcon />
             </a>
             <a href="#" className="social-link">
               <TwitterIcon />
             </a>
-            <a href="#" className="social-link">
+            <a  href="https://www.linkedin.com/in/jose-arosemena-72010824/?locale=en_US" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-link">
               <LinkedInIcon />
             </a>
           </div>

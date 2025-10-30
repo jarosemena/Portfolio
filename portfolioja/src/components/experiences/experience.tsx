@@ -21,25 +21,29 @@ const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experiences }) 
     <div className="timelineContainer">
       <div className="container">
         <div className="titleContainer">
-          <h2 className="title">Work Experience</h2>
-          {hasMoreExperiences && (
-            <button 
-              className="expandButton" 
-              onClick={handleShowMore}
-              title="Show more experiences"
-            >
-              +
-            </button>
-          )}
-          {isShowingAll && (
-            <button 
-              className="expandButton collapseButton" 
-              onClick={handleShowLess}
-              title="Show less experiences"
-            >
-              −
-            </button>
-          )}
+          <div className="title-wrapper">
+            <h2 className="title">Work Experience</h2>
+            <div className="button-wrapper">
+              {hasMoreExperiences && (
+                <button 
+                  className="expandButton" 
+                  onClick={handleShowMore}
+                  title="Show more experiences"
+                >
+                  +
+                </button>
+              )}
+              {isShowingAll && (
+                <button 
+                  className="expandButton collapseButton" 
+                  onClick={handleShowLess}
+                  title="Show less experiences"
+                >
+                  −
+                </button>
+              )}
+            </div>
+          </div>
         </div>
         
         <div className="experienceList">

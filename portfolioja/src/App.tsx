@@ -4,6 +4,7 @@ import CustumHeader from './components/header/header'
 import Footer from './components/footer/footer'
 import AboutMe from './components/aboutme/aboutme'
 import ExperienceTimeline from './components/experiences/experience'
+import Skills from './components/skills'
 import { experiences } from './components/experiences/getexperienceData';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <CustumHeader/>
         <AboutMe/>
         <ExperienceTimeline experiences={experiences} />
+        <Skills />
         <Footer/>
       </div>
     </>
