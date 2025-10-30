@@ -1,0 +1,176 @@
+{
+  "skills": [
+    {
+      "id": "1",
+      "name": ".NET Core",
+      "icon": "dotnet.svg",
+      "category": "Backend",
+      "level": "expert",
+      "description": "Developing scalable microservices and APIs using .NET Core and C#, architecting enterprise solutions",
+      "yearsOfExperience": 8
+    },
+    {
+      "id": "2",
+      "name": "C#",
+      "icon": "csharp.svg",
+      "category": "Backend",
+      "level": "expert",
+      "description": "Expert in C# development for backend services, APIs, and enterprise applications",
+      "yearsOfExperience": 14
+    },
+    {
+      "id": "3",
+      "name": "SQL Server",
+      "icon": "sqlserver.svg",
+      "category": "Databases",
+      "level": "expert",
+      "description": "Database design, optimization, SSRS reporting, and administration",
+      "yearsOfExperience": 14
+    },
+    {
+      "id": "4",
+      "name": "Oracle Database",
+      "icon": "oracle.svg",
+      "category": "Databases",
+      "level": "expert",
+      "description": "PL/SQL development, Oracle APEX, data warehousing, and performance optimization",
+      "yearsOfExperience": 10
+    },
+    {
+      "id": "5",
+      "name": "Azure",
+      "icon": "azure.svg",
+      "category": "Cloud",
+      "level": "expert",
+      "description": "Cloud-native architecture, Azure Kubernetes Service (AKS), PaaS/IaaS solutions, and cloud migrations",
+      "yearsOfExperience": 6
+    },
+    {
+      "id": "6",
+      "name": "Kubernetes",
+      "icon": "kubernetes.svg",
+      "category": "DevOps",
+      "level": "advanced",
+      "description": "Orchestrating microservices with Kubernetes and AKS for high-availability systems",
+      "yearsOfExperience": 3
+    },
+    {
+      "id": "7",
+      "name": "Docker",
+      "icon": "docker.svg",
+      "category": "DevOps",
+      "level": "advanced",
+      "description": "Containerization and orchestration of applications for cloud-native deployments",
+      "yearsOfExperience": 4
+    },
+    {
+      "id": "8",
+      "name": "Python",
+      "icon": "python.svg",
+      "category": "Backend",
+      "level": "advanced",
+      "description": "ETL automation, data processing, and scripting for workflow optimization",
+      "yearsOfExperience": 4
+    },
+    {
+      "id": "9",
+      "name": "React",
+      "icon": "react.svg",
+      "category": "Frontend",
+      "level": "intermediate",
+      "description": "Building modern web applications with React for frontend development",
+      "yearsOfExperience": 3
+    },
+    {
+      "id": "10",
+      "name": "ASP.NET",
+      "icon": "aspnet.svg",
+      "category": "Backend",
+      "level": "expert",
+      "description": "Enterprise web application development with ASP.NET framework",
+      "yearsOfExperience": 12
+    },
+    {
+      "id": "11",
+      "name": "Microservices",
+      "icon": "microservices.svg",
+      "category": "Architecture",
+      "level": "expert",
+      "description": "Designing and implementing scalable microservices architectures with event-driven patterns",
+      "yearsOfExperience": 6
+    },
+    {
+      "id": "12",
+      "name": "Oracle OSB",
+      "icon": "oracle.svg",
+      "category": "Integration",
+      "level": "advanced",
+      "description": "Service bus integration and SOA architecture for enterprise systems",
+      "yearsOfExperience": 3
+    },
+    {
+      "id": "13",
+      "name": "CI/CD",
+      "icon": "cicd.svg",
+      "category": "DevOps",
+      "level": "advanced",
+      "description": "Implementing continuous integration and deployment pipelines with Azure DevOps",
+      "yearsOfExperience": 5
+    },
+    {
+      "id": "14",
+      "name": "Git",
+      "icon": "git.svg",
+      "category": "DevOps",
+      "level": "expert",
+      "description": "Version control and collaboration in distributed development teams",
+      "yearsOfExperience": 10
+    },
+    {
+      "id": "15",
+      "name": "Xamarin",
+      "icon": "xamarin.svg",
+      "category": "Mobile",
+      "level": "intermediate",
+      "description": "Cross-platform mobile app development for iOS and Android",
+      "yearsOfExperience": 2
+    },
+    {
+      "id": "16",
+      "name": "WebSockets",
+      "icon": "websockets.svg",
+      "category": "Backend",
+      "level": "intermediate",
+      "description": "Real-time communication and data visualization systems",
+      "yearsOfExperience": 2
+    },
+   
+    {
+      "id": "18",
+      "name": "Agile/SCRUM",
+      "icon": "scrum.svg",
+      "category": "Methodology",
+      "level": "expert",
+      "description": "Leading agile teams, sprint planning, and mentoring developers in SCRUM practices",
+      "yearsOfExperience": 10
+    },
+    {
+      "id": "19",
+      "name": "Project Management",
+      "icon": "pm.svg",
+      "category": "Leadership",
+      "level": "advanced",
+      "description": "PMP-certified, managing cross-functional teams, MS Project, WorkFront, and stakeholder management",
+      "yearsOfExperience": 8
+    },
+    {
+      "id": "20",
+      "name": "RESTful APIs",
+      "icon": "api.svg",
+      "category": "Backend",
+      "level": "expert",
+      "description": "Designing and implementing high-concurrency RESTful APIs with security protocols",
+      "yearsOfExperience": 8
+    }
+  ]
+}
