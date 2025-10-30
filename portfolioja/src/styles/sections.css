@@ -1,0 +1,69 @@
+/* Estilos globales para las secciones */
+.section {
+  position: relative;
+  padding: 6rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.section-light {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.section-dark {
+  background-color: rgba(15, 23, 42, 0.75);
+}
+
+.section-gradient {
+  background: linear-gradient(
+    180deg, 
+    rgba(15, 23, 42, 0.75) 0%,
+    rgba(30, 41, 59, 0.75) 100%
+  );
+}
+
+/* Contenedor común para todas las secciones */
+.section-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+/* Títulos de sección */
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(226, 232, 240);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Para mantener consistencia con el título de Experience */
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title, .section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(226, 232, 240);
+  margin: 0;
+}
+
+/* Separador decorativo */
+.section-divider {
+  height: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+

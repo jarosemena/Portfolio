@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './skills.css';
 import { Skill, SkillsByCategory } from './types';
 import skillsData from './skills.json';
+import { LazyLoad } from '../common/lazy-load';
 
 const ExpertiseLevelStars: React.FC<{ level: Skill['level'] }> = ({ level }) => {
   const levels = {
@@ -30,18 +31,32 @@ const ExpertiseLevelStars: React.FC<{ level: Skill['level'] }> = ({ level }) => 
 };
 
 const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
-    <div className="skill-card">
-      <div className="skill-icon">
-        <img src={`/icons/${skill.icon}`} alt={skill.name} />
+    <LazyLoad threshold={0.1} rootMargin="100px">
+      <div className="skill-card">
+        <div className="skill-icon">
+          <img 
+            src={`/src/assets/icons/${skill.icon}`} 
+            alt={skill.name} 
+            loading="lazy"
+            onLoad={handleImageLoad}
+            className={imageLoaded ? 'loaded' : ''}
+          />
+        </div>
+        <h3 className="skill-name">{skill.name}</h3>
+        <ExpertiseLevelStars level={skill.level} />
+        <p className="skill-description">{skill.description}</p>
+        <p className="skill-experience">
+          {skill.yearsOfExperience} {skill.yearsOfExperience === 1 ? 'year' : 'years'} of experience
+        </p>
       </div>
-      <h3 className="skill-name">{skill.name}</h3>
-      <ExpertiseLevelStars level={skill.level} />
-      <p className="skill-description">{skill.description}</p>
-      <p className="skill-experience">
-        {skill.yearsOfExperience} {skill.yearsOfExperience === 1 ? 'year' : 'years'} of experience
-      </p>
-    </div>
+    </LazyLoad>
   );
 };
 
@@ -57,9 +72,11 @@ const Skills: React.FC = () => {
   }, {});
 
   return (
-    <div className="skills-container">
-      <div className="container">
-        <h2 className="title">Technical Skills</h2>
+    <section className="section section-dark skills-container">
+      <div className="section-container">
+        <div className="titleContainer">
+          <h2 className="title">Technical Skills</h2>
+        </div>
         <div className="categories-grid">
           {Object.entries(skillsByCategory).map(([category, skills]) => (
             <div 
@@ -82,7 +99,7 @@ const Skills: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

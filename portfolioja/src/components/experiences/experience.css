@@ -17,14 +17,24 @@
     }
   }
 
-  .titleContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  .title {
+.titleContainer {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.title-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}  .title {
     font-size: 1.875rem;
     font-weight: 700;
     color: rgb(226, 232, 240);
