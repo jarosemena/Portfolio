@@ -1,18 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './experience.css';
 import { ExperienceItem, ExperienceTimelineProps } from './types';
 
 const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experiences }) => {
+  const [showAll, setShowAll] = useState(false);
+  const initialExperiences = experiences.slice(0, 2);
+  const hasMoreExperiences = experiences.length > 2;
+
   return (
     <div className="timelineContainer">
       <div className="container">
-        <h2 className="title">Work Experience</h2>
+        <div className="titleContainer">
+          <h2 className="title">Work Experience</h2>
+          {hasMoreExperiences && (showAll ? (
+            <button 
+              className="expandButton collapseButton" 
+              onClick={() => setShowAll(false)}
+              title="Show less experiences"
+            >
+              −
+            </button>
+          ) : (
+            <button 
+              className="expandButton" 
+              onClick={() => setShowAll(true)}
+              title="Show more experiences"
+            >
+              +
+            </button>
+          ))}
+        </div>
         
         <div className="experienceList">
-          {experiences.map((experience) => (
+          {(showAll ? experiences : initialExperiences).map((experience) => (
             <ExperienceItemComponent key={experience.id} experience={experience} />
           ))}
         </div>
+
+        {hasMoreExperiences && !showAll && (
+          <button 
+            className="showMoreButton"
+            onClick={() => setShowAll(true)}
+          >
+            Show More Experiences
+          </button>
+        )}
       </div>
     </div>
   );
