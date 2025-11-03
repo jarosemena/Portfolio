@@ -72,7 +72,7 @@ const Skills: React.FC = () => {
   }, {});
 
   return (
-    <section className="section section-dark skills-container">
+    <section id="skills" className="section section-dark skills-container">
       <div className="section-container">
         <div className="titleContainer">
           <h2 className="title">Technical Skills</h2>

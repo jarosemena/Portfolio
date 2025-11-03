@@ -78,6 +78,7 @@
   
   .nav-item.active .nav-link {
     color: rgb(226 232 240);
+    font-size: large;
   }
   
   /* Responsive */

@@ -18,7 +18,7 @@ const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experiences }) 
   const visibleExperiences = experiences.slice(0, visibleCount);
 
   return (
-    <div className="timelineContainer">
+    <div id="experience" className="timelineContainer">
       <div className="container">
         <div className="titleContainer">
           <div className="title-wrapper">
