@@ -77,7 +77,7 @@
       "name": "React",
       "icon": "react.svg",
       "category": "Frontend",
-      "level": "biginner",
+      "level": "basic",
       "description": "Building modern web applications with React for frontend development",
       "yearsOfExperience": 1
     },
