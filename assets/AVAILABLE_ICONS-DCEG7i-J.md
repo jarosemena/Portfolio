@@ -1,0 +1,173 @@
+# Iconos Disponibles en el Portfolio
+
+Esta es una lista completa de todos los iconos SVG disponibles en la carpeta `src/assets/icons/`.
+
+## Iconos con Versiones Dark y Light:
+
+- Actix (Actix-Dark.svg, Actix-Light.svg)
+- AiScript (AiScript-Dark.svg, AiScript-Light.svg)
+- AlpineJS (AlpineJS-Dark.svg, AlpineJS-Light.svg)
+- Anaconda (Anaconda-Dark.svg, Anaconda-Light.svg)
+- AndroidStudio (AndroidStudio-Dark.svg, AndroidStudio-Light.svg) ✅ Usado para Xamarin
+- Angular (Angular-Dark.svg, Angular-Light.svg)
+- Apple (Apple-Dark.svg, Apple-Light.svg)
+- Arch (Arch-Dark.svg, Arch-Light.svg)
+- AWS (AWS-Dark.svg, AWS-Light.svg)
+- Azure (Azure-Dark.svg, Azure-Light.svg) ✅ Usado
+- Bash (Bash-Dark.svg, Bash-Light.svg)
+- BitBucket (BitBucket-Dark.svg, BitBucket-Light.svg)
+- Blender (Blender-Dark.svg, Blender-Light.svg)
+- Bun (Bun-Dark.svg, Bun-Light.svg)
+- Cassandra (Cassandra-Dark.svg, Cassandra-Light.svg)
+- Cloudflare (Cloudflare-Dark.svg, Cloudflare-Light.svg)
+- CMake (CMake-Dark.svg, CMake-Light.svg)
+- CodePen (CodePen-Dark.svg, CodePen-Light.svg)
+- Crystal (Crystal-Dark.svg, Crystal-Light.svg)
+- Cypress (Cypress-Dark.svg, Cypress-Light.svg)
+- Debian (Debian-Dark.svg, Debian-Light.svg)
+- DENO (DENO-Dark.svg, DENO-Light.svg)
+- DevTo (DevTo-Dark.svg, DevTo-Light.svg)
+- DiscordJS (DiscordJS-Dark.svg, DiscordJS-Light.svg)
+- DynamoDB (DynamoDB-Dark.svg, DynamoDB-Light.svg)
+- Eclipse (Eclipse-Dark.svg, Eclipse-Light.svg)
+- Elasticsearch (Elasticsearch-Dark.svg, Elasticsearch-Light.svg)
+- Elixir (Elixir-Dark.svg, Elixir-Light.svg)
+- ExpressJS (ExpressJS-Dark.svg, ExpressJS-Light.svg)
+- Figma (Figma-Dark.svg, Figma-Light.svg)
+- Firebase (Firebase-Dark.svg, Firebase-Light.svg)
+- Flask (Flask-Dark.svg, Flask-Light.svg)
+- Flutter (Flutter-Dark.svg, Flutter-Light.svg)
+- GCP (GCP-Dark.svg, GCP-Light.svg)
+- Github (Github-Dark.svg, Github-Light.svg)
+- GithubActions (GithubActions-Dark.svg, GithubActions-Light.svg) ✅ Usado para CI/CD
+- GitLab (GitLab-Dark.svg, GitLab-Light.svg)
+- Gmail (Gmail-Dark.svg, Gmail-Light.svg)
+- Godot (Godot-Dark.svg, Godot-Light.svg)
+- Gradle (Gradle-Dark.svg, Gradle-Light.svg)
+- Grafana (Grafana-Dark.svg, Grafana-Light.svg)
+- GraphQL (GraphQL-Dark.svg, GraphQL-Light.svg)
+- Hibernate (Hibernate-Dark.svg, Hibernate-Light.svg)
+- Java (Java-Dark.svg, Java-Light.svg)
+- Jenkins (Jenkins-Dark.svg, Jenkins-Light.svg)
+- Kotlin (Kotlin-Dark.svg, Kotlin-Light.svg)
+- Laravel (Laravel-Dark.svg, Laravel-Light.svg)
+- Linux (Linux-Dark.svg, Linux-Light.svg)
+- Lua (Lua-Dark.svg, Lua-Light.svg)
+- Markdown (Markdown-Dark.svg, Markdown-Light.svg)
+- MaterialUI (MaterialUI-Dark.svg, MaterialUI-Light.svg)
+- Matlab (Matlab-Dark.svg, Matlab-Light.svg)
+- Maven (Maven-Dark.svg, Maven-Light.svg)
+- Mint (Mint-Dark.svg, Mint-Light.svg)
+- MySQL (MySQL-Dark.svg, MySQL-Light.svg) ✅ Usado para SQL Server
+- NeoVim (NeoVim-Dark.svg, NeoVim-Light.svg)
+- NestJS (NestJS-Dark.svg, NestJS-Light.svg)
+- NextJS (NextJS-Dark.svg, NextJS-Light.svg)
+- NodeJS (NodeJS-Dark.svg, NodeJS-Light.svg)
+- Notion (Notion-Dark.svg, Notion-Light.svg) ✅ Usado para Agile/SCRUM y PM
+- Npm (Npm-Dark.svg, Npm-Light.svg)
+- NuxtJS (NuxtJS-Dark.svg, NuxtJS-Light.svg)
+- Obsidian (Obsidian-Dark.svg, Obsidian-Light.svg)
+- Octave (Octave-Dark.svg, Octave-Light.svg)
+- OpenCV (OpenCV-Dark.svg, OpenCV-Light.svg)
+- OpenStack (OpenStack-Dark.svg, OpenStack-Light.svg)
+- PHP (PHP-Dark.svg, PHP-Light.svg)
+- PhpStorm (PhpStorm-Dark.svg, PhpStorm-Light.svg)
+- Pnpm (Pnpm-Dark.svg, Pnpm-Light.svg)
+- PostgreSQL (PostgreSQL-Dark.svg, PostgreSQL-Light.svg) ✅ Usado para Oracle
+- Powershell (Powershell-Dark.svg, Powershell-Light.svg)
+- PyCharm (PyCharm-Dark.svg, PyCharm-Light.svg)
+- Python (Python-Dark.svg, Python-Light.svg) ✅ Usado
+- PyTorch (PyTorch-Dark.svg, PyTorch-Light.svg)
+- R (R-Dark.svg, R-Light.svg)
+- RabbitMQ (RabbitMQ-Dark.svg, RabbitMQ-Light.svg)
+- RaspberryPi (RaspberryPi-Dark.svg, RaspberryPi-Light.svg)
+- React (React-Dark.svg, React-Light.svg) ✅ Usado
+- ReactiveX (ReactiveX-Dark.svg, ReactiveX-Light.svg)
+- RedHat (RedHat-Dark.svg, RedHat-Light.svg)
+- Redis (Redis-Dark.svg, Redis-Light.svg)
+- Regex (Regex-Dark.svg, Regex-Light.svg)
+- Replit (Replit-Dark.svg, Replit-Light.svg)
+- Rider (Rider-Dark.svg, Rider-Light.svg)
+- Scala (Scala-Dark.svg, Scala-Light.svg)
+- SolidJS (SolidJS-Dark.svg, SolidJS-Light.svg)
+- Spring (Spring-Dark.svg, Spring-Light.svg)
+- Sublime (Sublime-Dark.svg, Sublime-Light.svg)
+- Supabase (Supabase-Dark.svg, Supabase-Light.svg)
+- Symfony (Symfony-Dark.svg, Symfony-Light.svg)
+- TailwindCSS (TailwindCSS-Dark.svg, TailwindCSS-Light.svg)
+- TensorFlow (TensorFlow-Dark.svg, TensorFlow-Light.svg)
+- Terraform (Terraform-Dark.svg, Terraform-Light.svg)
+- Ubuntu (Ubuntu-Dark.svg, Ubuntu-Light.svg)
+- Unity (Unity-Dark.svg, Unity-Light.svg)
+- Vercel (Vercel-Dark.svg, Vercel-Light.svg)
+- VIM (VIM-Dark.svg, VIM-Light.svg)
+- VisualStudio (VisualStudio-Dark.svg, VisualStudio-Light.svg)
+- Vite (Vite-Dark.svg, Vite-Light.svg)
+- Vitest (Vitest-Dark.svg, Vitest-Light.svg)
+- VSCode (VSCode-Dark.svg, VSCode-Light.svg)
+- WindiCSS (WindiCSS-Dark.svg, WindiCSS-Light.svg)
+- Windows (Windows-Dark.svg, Windows-Light.svg)
+
+## Iconos Sin Variantes (Un Solo Archivo):
+
+- Adonis.svg
+- Arduino.svg
+- Astro.svg
+- Atom.svg
+- Audition.svg
+- Azul.svg
+- Babel.svg
+- Bootstrap.svg
+- C.svg
+- CPP.svg
+- CS.svg ✅ Usado para C#
+- CSS.svg
+- Discord.svg
+- DiscordBots.svg
+- Django.svg
+- Docker.svg ✅ Usado
+- DotNet.svg ✅ Usado para .NET Core y ASP.NET
+- Electron.svg
+- Emacs.svg
+- Ember.svg
+- FastAPI.svg
+- Forth.svg
+- Fortran.svg
+- Gatsby.svg
+- Git.svg ✅ Usado
+- GoLang.svg
+- Heroku.svg
+- HTML.svg
+- JavaScript.svg
+- Jest.svg
+- JQuery.svg
+- Kafka.svg
+- Kubernetes.svg ✅ Usado (también para Microservices)
+- LinkedIn.svg
+- MongoDB.svg
+- Nginx.svg
+- OCaml.svg
+- OpenShift.svg
+- Perl.svg
+- Postman.svg ✅ Usado para RESTful APIs
+- Prometheus.svg
+- Rails.svg
+- Redux.svg
+- Rocket.svg
+- Ruby.svg
+- Rust.svg
+- Selenium.svg
+- SQLite.svg
+- StyledComponents.svg
+- Svelte.svg
+- Swift.svg
+- Twitter.svg
+- TypeScript.svg
+- UnrealEngine.svg
+- Webflow.svg
+- Wordpress.svg
+
+## Leyenda:
+- ✅ = Icono actualmente en uso en el portfolio
+- (alternativa) = Se usa un icono similar cuando no existe el específico
+- (reutilizado) = El mismo icono se usa para múltiples skills relacionados
