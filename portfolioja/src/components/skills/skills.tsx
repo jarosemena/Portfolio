@@ -32,22 +32,46 @@ const ExpertiseLevelStars: React.FC<{ level: Skill['level'] }> = ({ level }) => 
 
 const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+    console.error(`Failed to load icon: ${skill.icon}`);
+  };
+
+  // Construir la ruta correcta para los iconos
+  const getIconPath = (iconName: string) => {
+    try {
+      // Usar import.meta.url para obtener la ruta correcta en Vite
+      return new URL(`../../assets/icons/${iconName}`, import.meta.url).href;
+    } catch (error) {
+      console.error(`Error loading icon: ${iconName}`, error);
+      return '';
+    }
   };
 
   return (
     <LazyLoad threshold={0.1} rootMargin="100px">
       <div className="skill-card">
         <div className="skill-icon">
-          <img 
-            src={`/src/assets/icons/${skill.icon}`}
-            alt={skill.name} 
-            loading="lazy"
-            onLoad={handleImageLoad}
-            className={imageLoaded ? 'loaded' : ''}
-          />
+          {!imageError ? (
+            <img 
+              src={getIconPath(skill.icon)}
+              alt={skill.name} 
+              loading="lazy"
+              onLoad={handleImageLoad}
+              onError={handleImageError}
+              className={imageLoaded ? 'loaded' : ''}
+            />
+          ) : (
+            <div className="icon-placeholder">
+              {skill.name.charAt(0)}
+            </div>
+          )}
         </div>
         <h3 className="skill-name">{skill.name}</h3>
         <ExpertiseLevelStars level={skill.level} />
