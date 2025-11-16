@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": ".NET Core",
-      "icon": "dotnet.svg",
+      "icon": "DotNet.svg",
       "category": "Backend",
       "level": "expert",
       "description": "Developing scalable microservices and APIs using .NET Core and C#, architecting enterprise solutions",
@@ -12,7 +12,7 @@
     {
       "id": "2",
       "name": "C#",
-      "icon": "csharp.svg",
+      "icon": "CS.svg",
       "category": "Backend",
       "level": "expert",
       "description": "Expert in C# development for backend services, APIs, and enterprise applications",
@@ -21,7 +21,7 @@
     {
       "id": "3",
       "name": "SQL Server",
-      "icon": "sqlserver.svg",
+      "icon": "microsoft-sql-server.svg",
       "category": "Databases",
       "level": "expert",
       "description": "Database design, optimization, SSRS reporting, and storeprocedures development",
@@ -39,7 +39,7 @@
     {
       "id": "5",
       "name": "Azure",
-      "icon": "azure.svg",
+      "icon": "Azure-Dark.svg",
       "category": "Cloud",
       "level": "intermediate",
       "description": "Cloud-native architecture, Azure Kubernetes Service (AKS), PaaS/IaaS solutions",
@@ -48,7 +48,7 @@
     {
       "id": "6",
       "name": "Kubernetes",
-      "icon": "kubernetes.svg",
+      "icon": "Kubernetes.svg",
       "category": "DevOps",
       "level": "advanced",
       "description": "Orchestrating microservices with Kubernetes and AKS for high-availability systems",
@@ -57,7 +57,7 @@
     {
       "id": "7",
       "name": "Docker",
-      "icon": "docker.svg",
+      "icon": "Docker.svg",
       "category": "DevOps",
       "level": "intermediate",
       "description": "Containerization and orchestration of applications for cloud-native deployments",
@@ -66,7 +66,7 @@
     {
       "id": "8",
       "name": "Python",
-      "icon": "python.svg",
+      "icon": "Python-Dark.svg",
       "category": "Backend",
       "level": "advanced",
       "description": "API REST development, and scripting for workflow optimization",
@@ -75,7 +75,7 @@
     {
       "id": "9",
       "name": "React",
-      "icon": "react.svg",
+      "icon": "React-Dark.svg",
       "category": "Frontend",
       "level": "basic",
       "description": "Building modern web applications with React for frontend development",
@@ -84,7 +84,7 @@
     {
       "id": "10",
       "name": "ASP.NET",
-      "icon": "aspnet.svg",
+      "icon": "DotNet.svg",
       "category": "Backend",
       "level": "intermediate",
       "description": "Enterprise web application development with ASP.NET framework",
@@ -93,7 +93,7 @@
     {
       "id": "11",
       "name": "Microservices",
-      "icon": "microservices.svg",
+      "icon": "Kubernetes.svg",
       "category": "Architecture",
       "level": "expert",
       "description": "Designing and implementing scalable microservices architectures with event-driven patterns",
@@ -102,7 +102,7 @@
     {
       "id": "12",
       "name": "Oracle OSB",
-      "icon": "oracle.svg",
+      "icon": "oracle-osb.svg",
       "category": "Integration",
       "level": "advanced",
       "description": "Service bus integration and SOA architecture for enterprise systems",
@@ -111,7 +111,7 @@
     {
       "id": "13",
       "name": "CI/CD",
-      "icon": "cicd.svg",
+      "icon": "GithubActions-Dark.svg",
       "category": "DevOps",
       "level": "intermediate",
       "description": "Implementing continuous integration and deployment pipelines with Azure DevOps",
@@ -120,7 +120,7 @@
     {
       "id": "14",
       "name": "Git",
-      "icon": "git.svg",
+      "icon": "Git.svg",
       "category": "DevOps",
       "level": "expert",
       "description": "Version control and collaboration in distributed development teams",
@@ -140,7 +140,7 @@
     {
       "id": "18",
       "name": "Agile/SCRUM",
-      "icon": "scrum.svg",
+      "icon": "agil-scrum.svg",
       "category": "Methodology",
       "level": "expert",
       "description": "Leading agile teams, sprint planning, and mentoring developers in SCRUM practices",
@@ -149,7 +149,7 @@
     {
       "id": "19",
       "name": "Project Management",
-      "icon": "pm.svg",
+      "icon": "PMP.svg",
       "category": "Leadership",
       "level": "advanced",
       "description": "PMP-certified, managing cross-functional teams, MS Project, WorkFront, and stakeholder management",
@@ -158,7 +158,7 @@
     {
       "id": "20",
       "name": "RESTful APIs",
-      "icon": "api.svg",
+      "icon": "Postman.svg",
       "category": "Backend",
       "level": "expert",
       "description": "Designing and implementing high-concurrency RESTful APIs with security protocols",
