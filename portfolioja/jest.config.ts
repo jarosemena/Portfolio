@@ -16,8 +16,7 @@ const config: Config = {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@tests/(.*)$': '<rootDir>/src/tests/$1',
     '^@domain/(.*)$': '<rootDir>/src/domain/$1',
-    '^@infrastructure/(.*)$': '<rootDir>/src/infrastructure/$1',
-    '\\.json$': 'identity-obj-proxy'
+    '^@infrastructure/(.*)$': '<rootDir>/src/infrastructure/$1'
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testMatch: ['**/__tests__/**/*.(ts|tsx|js|jsx)', '**/?(*.)+(spec|test).(ts|tsx|js|jsx)'],

@@ -1,7 +1,7 @@
 // components/about/AboutMe.tsx
 import React from 'react';
 import './aboutme.css';
-import data from './aboutme.json';
+import data from '../../data/aboutme.json';
 import '../common/pharagraph'
 import { Paragraph } from '../common/pharagraph/paragraph';
 

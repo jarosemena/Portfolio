@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './skills.css';
 import { Skill, SkillsByCategory } from './types';
-import skillsData from './skills.json';
+import skillsData from '../../data/skills.json';
 import { LazyLoad } from '../common/lazy-load';
 
 const ExpertiseLevelStars: React.FC<{ level: Skill['level'] }> = ({ level }) => {
@@ -42,7 +42,7 @@ const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
       <div className="skill-card">
         <div className="skill-icon">
           <img 
-            src={`/src/assets/icons/${skill.icon}`} 
+            src={`/src/assets/icons/${skill.icon}`}
             alt={skill.name} 
             loading="lazy"
             onLoad={handleImageLoad}

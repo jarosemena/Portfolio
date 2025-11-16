@@ -1,0 +1,10 @@
+{
+    "aboutme": {
+      "title": "About Me",
+      "paragraphs": [
+        "Experienced **Full Stack Software Developer** with over _8 years_ of experience in **software architecture** of scalable enterprise applications using **.NET, C#, React, SQL, and Azure**. **PMP-certified** professional with **DevOps** proficiency (CI/CD, AzureDevops)",
+        "Strong background in **API** development, database optimization, and **cloud-native** solutions. Adept at delivering _secure_, _user-centered_ applications in Agile environments.",
+        "Passionate about _continuous learning_, with exposure to containerization tools **Docker**, secure coding practices, and accessible UI design."
+      ]
+    }
+  }
