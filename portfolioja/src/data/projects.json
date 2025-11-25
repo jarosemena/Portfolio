@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "name": "Health Insurance Microservices Platform",
+      "description": "Architected a comprehensive health insurance platform using Oracle OSB and .NET Core microservices, processing over 100K transactions daily with 40% efficiency improvement",
+      "imageUrl": "/images/projects/health-insurance-platform.jpg",
+      "projectUrl": "https://www.segurossura.com",
+      "technologies": [
+        { "name": ".NET Core" },
+        { "name": "Oracle OSB" },
+        { "name": "Microservices" },
+        { "name": "Oracle DB" }
+      ],
+      "year": "2021",
+      "featured": true
+    },
+    {
+      "id": "2",
+      "name": "Cloud-Native Aviation Platform",
+      "description": "Designed and deployed scalable microservices on Azure Kubernetes Service (AKS) serving 2M+ monthly users with 99.9% uptime and 25% cost reduction",
+      "imageUrl": "/images/projects/aviation-platform.jpg",
+      "projectUrl": "https://www.copaair.com",
+      "technologies": [
+        { "name": ".NET Core" },
+        { "name": "Azure Kubernetes" },
+        { "name": "AKS" },
+        { "name": "Microservices" }
+      ],
+      "year": "2023",
+      "featured": true
+    },
+    {
+      "id": "3",
+      "name": "Industrial IoT Monitoring System",
+      "description": "Built real-time industrial data visualization system using Azure and WebSockets, enabling instant monitoring of critical industrial processes with 50% faster response times",
+      "imageUrl": "/images/projects/iot-monitoring.jpg",
+      "technologies": [
+        { "name": "Azure" },
+        { "name": "WebSockets" },
+        { "name": "Real-time Systems" },
+        { "name": "C#" }
+      ],
+      "year": "2019",
+      "featured": false
+    },
+    {
+      "id": "4",
+      "name": "Mobile Industrial Alerts App",
+      "description": "Developed cross-platform Xamarin mobile application with push notifications for industrial monitoring, replacing legacy systems and improving incident response by 50%",
+      "imageUrl": "/images/projects/mobile-alerts.jpg",
+      "technologies": [
+        { "name": "Xamarin" },
+        { "name": "Mobile Development" },
+        { "name": "Azure" },
+        { "name": "Push Notifications" }
+      ],
+      "year": "2019",
+      "featured": false
+    },
+    {
+      "id": "5",
+      "name": "ETL Automation Framework",
+      "description": "Automated ETL workflows using Python for health insurance data processing, reducing data load times by 30% and improving data quality across multiple systems",
+      "imageUrl": "/images/projects/etl-framework.jpg",
+      "technologies": [
+        { "name": "Python" },
+        { "name": "ETL" },
+        { "name": "SQL Server" },
+        { "name": "Data Warehouse" }
+      ],
+      "year": "2020",
+      "featured": false
+    }
+  ]
+}
